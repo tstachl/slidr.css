@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Demo - slidr.css</title>
+    <meta name="description" content="A library to create sliders from checkboxes.">
+    <meta name="viewport" content="width=device-width">
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="slidr.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="hero-unit">
+						<h1>Slidr.css</h1>
+						<p>A standalone CSS library for sliders. No Javascript needed!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4">
+					<h2>Default Styles</h2>
+					<form>
+					  <fieldset>
+					    <legend>Legend</legend>
+					    <label>Label name</label>
+					    <input type="text" placeholder="Type something…">
+					    <span class="help-block">Example block-level help text here.</span>
+					    <label class="checkbox">
+					      <input type="checkbox" class="slidr"> Check me out
+					    </label>
+					    <button type="submit" class="btn">Submit</button>
+					  </fieldset>
+					</form>
+				</div>
+				<div class="span8">
+					<h2>Horizontal form</h2>
+					<form class="form-horizontal">
+					  <div class="control-group">
+					    <label class="control-label" for="inputEmail">Email</label>
+					    <div class="controls">
+					      <input type="text" id="inputEmail" placeholder="Email">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="inputPassword">Password</label>
+					    <div class="controls">
+					      <input type="password" id="inputPassword" placeholder="Password">
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <div class="controls">
+					      <label class="checkbox">
+					        <input type="checkbox" class="slidr slidr-inverse"> Remember me
+					      </label>
+					      <button type="submit" class="btn">Sign in</button>
+					    </div>
+					  </div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					<h2>Inline form</h2>
+					<form class="form-inline">
+					  <input type="text" class="input-small" placeholder="Email">
+					  <input type="password" class="input-small" placeholder="Password">
+					  <label class="checkbox">
+					    <input type="checkbox" class="slidr slidr-success"> Remember me
+					  </label>
+					  <button type="submit" class="btn">Sign in</button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h2>Slidrs</h2>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-info" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-success" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-warning" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-danger" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+			  	<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-inverse" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+				</div>
+				<div class="span6">
+					<h2>Setting Text</h2>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr" data-on="I" data-off="O" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-info" data-on="ON" data-off="OFF" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-success" data-on="Ein" data-off="Aus" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-warning" data-on="Check" data-off="Nope" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+					<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-danger" data-on="✓" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+			  	<label class="checkbox">
+					  <input type="checkbox" class="slidr slidr-inverse" data-on="+" data-off="-" value="" checked>
+					  Option one is this and that—be sure to include why it's great
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					<h2>Sample Code</h2>
+					<pre>
+&lt;label class="checkbox"&gt;
+  &lt;!-- 
+    Note the data-on and data-off attributes to set the text.
+    Possible additional classes are:
+    slidr-info | slidr-success | slidr-warning | slidr-danger | slidr-inverse
+  --&gt;
+  &lt;input type="checkbox" class="slidr" data-on="ON" data-off="OFF" value=""&gt;
+  Option one is this and that—be sure to include why it's great
+&lt;/label&gt;</pre>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -36,11 +36,12 @@
 		  .three-one .row, .three-one .col, .three-two .row, .three-two .col, .three-three .row, .three-three .col, .four-one .row, .four-one .col, .four-two .row, .four-two .col, .four-three .row, .four-three .col, .four-four .row, .four-four .col { margin: 0%; }
 		  .three-one .col, .three-two .col, .three-three .col, .four-one .col, .four-two .col, .four-three .col, .four-four .col { margin: 0 1%; } }
 			.checkbox { padding-left: 0px; line-height: 26px; min-height: 26px; }
-			
 			.checkbox input[type="checkbox"] {
-				position: absolute !important;
-				top: -9999px !important;
-				left: -9999px !important;
+			  position: absolute; 
+			  overflow: hidden; 
+			  clip: rect(0 0 0 0); 
+			  height: 1px; width: 1px; 
+			  margin: -1px; padding: 0; border: 0;
 			}
 		</style>
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />

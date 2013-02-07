@@ -11,9 +11,11 @@
 		<style>
 			.checkbox { padding-left: 0px; line-height: 26px; min-height: 26px; }
 			.checkbox input[type="checkbox"] {
-			   position: absolute !important;
-			   top: -9999px !important;
-			   left: -9999px !important;
+			  position: absolute; 
+			  overflow: hidden; 
+			  clip: rect(0 0 0 0); 
+			  height: 1px; width: 1px; 
+			  margin: -1px; padding: 0; border: 0;
 			}
 			
 			.com { color: #93a1a1; }

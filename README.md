@@ -1,7 +1,24 @@
 # slidr.css
 A standalone CSS library for sliders. No Javascript needed!
 
-This library was inspired by [chinchang' hint.css](https://github.com/chinchang/hint.css). It is also written in pure CSS and does not rely on JavaScript. The original `checkbox` is kept which means you can simply add the class `slidr` and you have a checkbox designed like a slider. Nothing else changes it uses the `:checked` pseudo selector to apply the styles.
+This library was inspired by [chinchang' hint.css](https://github.com/chinchang/hint.css). It is also written in pure CSS and does not rely on JavaScript. The original `checkbox` is kept which means you can simply add a span with the `slidr` class and you have a checkbox designed like a slider. Nothing else changes it uses the `:checked` pseudo selector to apply the styles.
+
+## Sample Code
+
+		<label class="checkbox">
+			<!--
+				Note the data-on and data-off attributes to set text for the states.
+				Possible additional classes (alla Bootstrap) are:
+					* slidr-info
+					* slidr-success
+					* slidr-warning
+					* slidr-danger
+					* slidr-inverse
+			-->
+			<input type="checkbox">
+			<span class="slidr" data-on="ON" data-off="OFF"></span>
+			Option one is this and that—be sure to include why it's great
+		</label>
 
 ## Styles
 `slidr.css` was built on top of Twitter Bootstrap, therefor I added the default styles which are used for labels, badges, buttons and so on.
@@ -13,7 +30,7 @@ This library was inspired by [chinchang' hint.css](https://github.com/chinchang/
 - `.slidr-inverse`
 
 ### Transitions
-Currently transitions on pseudo elements is only available in FireFox. I didn't take the time to implement them but I'll add them as soon as they are available on webkit too.
+Currently transitions on pseudo elements is only available in Firefox and Internet Explorer 10. But in case the Chrome update comes available in the next few weeks I added transitions for all browsers.
 
 ### Demo
 [http://tstachl.github.com/slidr.css/](http://tstachl.github.com/slidr.css/)

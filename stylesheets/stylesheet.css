@@ -98,7 +98,8 @@ header h2 {
   max-width: 100%;
 }
 
-#downloads {
+#downloads,
+#share {
   margin-bottom: 40px;
 }
 
@@ -164,6 +165,7 @@ a.button span {
 #view-on-github {
   margin-right: 0;
 }
+#share { text-align: center; }
 
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;

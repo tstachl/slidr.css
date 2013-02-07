@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if !IE]><!--> <html>             <!--<![endif]-->
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -43,7 +48,7 @@
 		       -moz-user-select: none;
 		        -ms-user-select: none;
 		            user-select: none; }
-			.checkbox input[type="checkbox"] {
+			html:not(.ie) .checkbox input[type="checkbox"] {
 			  position: absolute; 
 			  overflow: hidden; 
 			  clip: rect(0 0 0 0); 
@@ -56,6 +61,9 @@
 			       -moz-user-select: none;
 			        -ms-user-select: none;
 			            user-select: none;
+			}
+			html.ie .checkbox span {
+				display: none;
 			}
 		</style>
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />

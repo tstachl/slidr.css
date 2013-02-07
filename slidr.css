@@ -21,7 +21,8 @@ input[type="checkbox"] ~ span.slidr {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  cursor: pointer; }
   input[type="checkbox"] ~ span.slidr::before {
     content: attr(data-off);
     position: absolute;

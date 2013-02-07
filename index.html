@@ -6,6 +6,43 @@
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/slidr.css" media="screen" />
+		<style>
+		.container { max-width: 960px; margin: 0 auto; }
+		.row:before, .row:after { content: " "; display: table; }
+		.row:after { clear: both; }
+		.row { *zoom: 1; }
+		.col { border: 0px solid rgba(0, 0, 0, 0); float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -moz-background-clip: padding-box !important; -webkit-background-clip: padding-box !important; background-clip: padding-box !important; margin: 0 2%; display: block; }
+		.three-one, .three-two, .three-three, .four-one, .four-two, .four-three, .four-four { width: 96%; }
+		.nested { margin: 0; width: 100%; }
+		.nested .row { margin: 0; }
+		@media screen and (min-width: 480px) { .row, .col { margin: 0 1%; }
+		  .three-one { width: 48%; }
+		  .three-two { width: 48%; }
+		  .three-three { width: 98%; }
+		  .three-one.tablet-full { width: 98%; }
+		  .four-one { width: 48%; }
+		  .four-two { width: 48%; }
+		  .four-three { width: 98%; }
+		  .four-four { width: 98%; }
+		  .four-one.tablet-full { width: 98%; }
+		  .nested { margin: 0; width: 100%; }
+		  .nested .row { margin: 0; } }
+		@media screen and (min-width: 760px) { .three-one, .three-one.tablet-full { width: 31.33333333%; }
+		  .three-two { width: 64.66666667%; }
+		  .four-one, .four-one.tablet-full { width: 23%; }
+		  .four-two { width: 48%; }
+		  .four-three { width: 73%; }
+		  .three-one .row, .three-one .col, .three-two .row, .three-two .col, .three-three .row, .three-three .col, .four-one .row, .four-one .col, .four-two .row, .four-two .col, .four-three .row, .four-three .col, .four-four .row, .four-four .col { margin: 0%; }
+		  .three-one .col, .three-two .col, .three-three .col, .four-one .col, .four-two .col, .four-three .col, .four-four .col { margin: 0 1%; } }
+			.checkbox { padding-left: 0px; line-height: 26px; min-height: 26px; }
+			
+			.checkbox input[type="checkbox"] {
+				position: absolute !important;
+				top: -9999px !important;
+				left: -9999px !important;
+			}
+		</style>
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,7 +56,7 @@
 
         <header>
           <h1>Slidr.css</h1>
-          <h2>A standalone CSS library for sliding checkboxes.          No Javascript needed!</h2>
+          <h2>A standalone CSS library for sliding checkboxes.<br>No Javascript needed!</h2>
         </header>
 
         <section id="downloads" class="clearfix">
@@ -48,6 +85,107 @@
   Option one is this and that—be sure to include why it's great
 &lt;/label&gt;
 </code></pre>
+
+<h2>Demo</h2>
+<div class="container">
+	<div class="row">
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox" checked>
+				<span class="slidr"></span>
+				Default slidr.
+			</label>
+		</div>
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="slidr" data-on="ON" data-off="OFF"></span>
+				Default slidr with text.
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="slidr slidr-info"></span>
+				Info slidr.
+			</label>
+		</div>
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox" checked>
+				<span class="slidr slidr-info" data-on="ON" data-off="OFF"></span>
+				Info slidr with text.
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox" checked>
+				<span class="slidr slidr-success"></span>
+				Success slidr.
+			</label>
+		</div>
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="slidr slidr-success" data-on="ON" data-off="OFF"></span>
+				Success slidr with text.
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="slidr slidr-warning"></span>
+				Warning slidr.
+			</label>
+		</div>
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox" checked>
+				<span class="slidr slidr-warning" data-on="ON" data-off="OFF"></span>
+				Warning slidr with text.
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox" checked>
+				<span class="slidr slidr-danger"></span>
+				Danger slidr.
+			</label>
+		</div>
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="slidr slidr-danger" data-on="ON" data-off="OFF"></span>
+				Danger slidr with text.
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox">
+				<span class="slidr slidr-inverse"></span>
+				Inverse slidr.
+			</label>
+		</div>
+		<div class="col four-two">
+			<label class="checkbox">
+				<input type="checkbox" checked>
+				<span class="slidr slidr-inverse" data-on="ON" data-off="OFF"></span>
+				Inverse slidr with text.
+			</label>
+		</div>
+	</div>
+</div>
+<p></p>
 
 <h2>Styles</h2>
 
@@ -78,17 +216,39 @@
 <li>Include them as stylesheets in your page.</li>
 <li>
 <p>Create a checkbox with the new <code>slidr</code> class:</p>
-
 <p>
-  
+	<label class="checkbox">
+		<input type="checkbox">
+		<span class="slidr"></span>
+	  Default slidr.
+	</label>
 </p>
+
+<pre><code>&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox"&gt;
+  &lt;span class="slidr"&gt;&lt;/span&gt;
+  Option one is this and that—be sure to include why it's great
+&lt;/label&gt;
+</code></pre>
+
 </li>
 <li>
 <p>If you need a green slider use <code>slidr-success</code>:</p>
-
 <p>
-  
+	<label class="checkbox">
+		<input type="checkbox">
+		<span class="slidr slidr-success"></span>
+	  Success slidr.
+	</label>
 </p>
+
+<pre><code>&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox"&gt;
+  &lt;span class="slidr slidr-success"&gt;&lt;/span&gt;
+  Option one is this and that—be sure to include why it's great
+&lt;/label&gt;
+</code></pre>
+
 </li>
 </ol><p>That's it now get cracking ...</p>
 

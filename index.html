@@ -65,6 +65,30 @@
 			html.ie .checkbox span {
 				display: none;
 			}
+			header h1 small {
+				font-size: 60%;
+				
+				/* taken from http://css-tricks.com/examples/TextStroke/ */
+			  /* WebKit (Safari/Chrome) Only */
+			  -webkit-text-stroke: 1px black;
+
+			  /* If we weren't using text-shadow, we'd set a fallback color
+			     and use this to set color instead
+			    -webkit-text-fill-color: white; */
+
+			  color: red;
+
+			  text-shadow:
+			    3px 3px 0 #000,
+			    /* Simulated effect for Firefox and Opera
+			       and nice enhancement for WebKit */
+			   -1px -1px 0 #000,  
+			    1px -1px 0 #000,
+			   -1px  1px 0 #000,
+			    1px  1px 0 #000;
+			}
+			ol ul { padding-left: 20px; }
+			ol ul li { list-style: disc inside; }
 		</style>
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
@@ -78,7 +102,7 @@
       <div class="inner">
 
         <header>
-          <h1>Slidr.css</h1>
+          <h1>Slidr.css <small>experimental</small></h1>
           <h2>A standalone CSS library for sliding checkboxes.<br>No Javascript needed!</h2>
 				</header>
 
@@ -227,6 +251,11 @@
 </div>
 <p></p>
 
+<h2>Internet Explorer</h2>
+<p>First off let me say that this piece of <code>css</code> is not meant for production use. Second I didn't create this with IE in mind.</p>
+<p>However, loads of comments have been made regarding IE so here it goes:</p>
+<p><img src="images/slidr_IE_vs_FF.jpg" alt="Internet Explorer vs. Firefox"></p>
+
 <h2>Styles</h2>
 
 <p><code>slidr.css</code> was built on top of Twitter Bootstrap, therefor I added the default styles which are used for labels, badges, buttons and so on.</p>
@@ -239,7 +268,7 @@
 <li><code>.slidr-inverse</code></li>
 </ul><h3>Transitions</h3>
 
-<p>Currently transitions on pseudo elements is only available in Firefox and Internet Explorer 10. But in case the Chrome update comes available in the next few weeks I added transitions for all browsers</p>
+<p>Currently transitions on pseudo elements is only available in Firefox and Internet Explorer 10. But in case the Chrome update becomes available in the next few weeks I added transitions for all browsers</p>
 
 <h2>Get Started</h2>
 

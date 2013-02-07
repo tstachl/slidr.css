@@ -25,11 +25,13 @@ Currently transitions on pseudo elements is only available in FireFox. I didn't 
 2. Include them as stylesheets in your page.
 3. Create a checkbox with the new `slidr` class:
 
-		<input type="checkbox" class="slidr">
+		<input type="checkbox">
+		<span class="slidr"></span>
 
 4. If you need a green slider use `slidr-success`:
 
-		<input type="checkbox" class="slidr slidr-success">
+		<input type="checkbox">
+		<span class="slidr slidr-success"></span>
 
 That's it now get cracking ...
 

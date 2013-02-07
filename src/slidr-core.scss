@@ -6,6 +6,7 @@ input[type="checkbox"] ~ span.slidr {
   width: 75px;
   top: 5px;
   line-height: 26px;
+  @include user-select(none);
   
   &::before {
     content: attr(data-off);

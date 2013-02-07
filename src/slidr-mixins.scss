@@ -30,3 +30,11 @@
        -o-transition: $transition;
           transition: $transition;
 }
+@mixin user-select($select: none) {
+  -webkit-touch-callout: $select;
+    -webkit-user-select: $select;
+     -khtml-user-select: $select;
+       -moz-user-select: $select;
+        -ms-user-select: $select;
+            user-select: $select;
+}

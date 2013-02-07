@@ -1,60 +1,58 @@
 //slidr-core.scss
-// bootstrap fixes
-.checkbox { padding-left: 85px; line-height: 35px; min-height: 35px; }
-.checkbox input[type="checkbox"] { margin-left: -85px; }
-
-.slidr {
+input[type="checkbox"] ~ span.slidr {
   position: relative;
   display: inline-block;
-  height: 30px !important;
-  width: 75px !important;
+  height: 26px;
+  width: 75px;
+  top: 5px;
+  line-height: 26px;
   
-  &::after {
+  &::before {
     content: attr(data-off);
-    width: 44px;
-    height: 16px;
-    display: inline-block;
-    @include gradient-vertical($slidrBackgroundHighlight, $slidrBackground);
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    @include double-gradient-vertical($slidrActive, $slidrActiveHighlight, $slidrBackgroundHighlight, $slidrBackground);
+    background-size: 75px 26px, 75px 26px;
+    background-position: -75px 0, 0 0;
     border: 1px solid $slidrBorder;
     @include border-radius(13px);
-    padding: 5px 5px 5px 26px;
+    @include transition(background-position 0.1s ease-in-out);
+    padding: 0 5px 0 26px;
     outline: none;
     overflow: hidden;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
   }
+
+  &.slidr-info::before { @include double-gradient-vertical($slidrActiveInfo, $slidrActiveInfoHighlight, $slidrBackgroundHighlight, $slidrBackground); }
+  &.slidr-success::before { @include double-gradient-vertical($slidrActiveSuccess, $slidrActiveSuccessHighlight, $slidrBackgroundHighlight, $slidrBackground); }
+  &.slidr-warning::before { @include double-gradient-vertical($slidrActiveWarning, $slidrActiveWarningHighlight, $slidrBackgroundHighlight, $slidrBackground); }
+  &.slidr-danger::before { @include double-gradient-vertical($slidrActiveDanger, $slidrActiveDangerHighlight, $slidrBackgroundHighlight, $slidrBackground); }
+  &.slidr-inverse::before { @include double-gradient-vertical($slidrActiveInverse, $slidrActiveInverseHighlight, $slidrBackgroundHighlight, $slidrBackground); }
   
-  &::before {
+  &::after {
     content: '';
-    display: block;
+    position: absolute;
     width: 24px;
     height: 24px;
-    position: absolute;
-    z-index: 3;
-    top: 1px;
-    left: 1px;
+    left: 0;
+    @include transition(left 0.1s ease-in-out);
     @include gradient-vertical($slidrBackground, $slidrBackgroundHighlight);
     border: 1px solid $slidrBorderThumb;
     @include border-radius(13px);
   }
-  
-  &:checked {
-    &::after {
-      content: attr(data-on);
-      color: $slidrBackground;
-      padding: 5px 26px 5px 5px;
-      @include gradient-vertical($slidrActive, $slidrActiveHighlight);
-    }
-  
-    &::before {
-      left: 50px;
-    }
+}
+
+input[type="checkbox"]:checked ~ span.slidr {
+  &::before {
+    content: attr(data-on);
+    color: $slidrBackground;
+    padding: 0 26px 0 5px;
+    background-position: 0 0, 75px 0;
   }
-  
-  &.slidr-info:checked::after { @include gradient-vertical($slidrActiveInfo, $slidrActiveInfoHighlight); }
-  &.slidr-success:checked::after { @include gradient-vertical($slidrActiveSuccess, $slidrActiveSuccessHighlight); }
-  &.slidr-warning:checked::after { @include gradient-vertical($slidrActiveWarning, $slidrActiveWarningHighlight); }
-  &.slidr-danger:checked::after { @include gradient-vertical($slidrActiveDanger, $slidrActiveDangerHighlight); }
-  &.slidr-inverse:checked::after { @include gradient-vertical($slidrActiveInverse, $slidrActiveInverseHighlight); }
+
+  &::after {
+    left: 50px;
+  }
 }

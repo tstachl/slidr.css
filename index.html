@@ -8,6 +8,45 @@
     <meta name="viewport" content="width=device-width">
 		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
 		<link href="slidr.css" rel="stylesheet">
+		<style>
+			.checkbox { padding-left: 0px; line-height: 26px; min-height: 26px; }
+			.checkbox input[type="checkbox"] {
+			   position: absolute !important;
+			   top: -9999px !important;
+			   left: -9999px !important;
+			}
+			
+			.com { color: #93a1a1; }
+			.lit { color: #195f91; }
+			.pun, .opn, .clo { color: #93a1a1; }
+			.fun { color: #dc322f; }
+			.str, .atv { color: #D14; }
+			.kwd, .prettyprint .tag { color: #1e347b; }
+			.typ, .atn, .dec, .var { color: teal; }
+			.pln { color: #48484c; }
+
+			.prettyprint {
+			  padding: 8px;
+			  background-color: #f7f7f9;
+			  border: 1px solid #e1e1e8;
+			}
+			.prettyprint.linenums {
+			  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+			     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+			          box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+			}
+
+			/* Specify class=linenums on a pre to get line numbering */
+			ol.linenums {
+			  margin: 0 0 0 33px; /* IE indents via margin-left */
+			}
+			ol.linenums li {
+			  padding-left: 12px;
+			  color: #bebec5;
+			  line-height: 20px;
+			  text-shadow: 0 1px 0 #fff;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -20,7 +59,23 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="span4">
+				<div class="span12">
+					<h2>Sample Code</h2>
+					<pre class="prettyprint lang-html">
+&lt;label class="checkbox"&gt;
+  &lt;!-- 
+    Note the data-on and data-off attributes to set the text.
+    Possible additional classes are:
+    slidr-info | slidr-success | slidr-warning | slidr-danger | slidr-inverse
+  --&gt;
+  &lt;input type="checkbox" value=""&gt;
+  &lt;span class="slidr" data-on="ON" data-off="OFF"&gt;&lt;/span&gt;
+  Option one is this and that—be sure to include why it's great
+&lt;/label&gt;</pre>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
 					<h2>Default Styles</h2>
 					<form>
 					  <fieldset>
@@ -29,13 +84,13 @@
 					    <input type="text" placeholder="Type something…">
 					    <span class="help-block">Example block-level help text here.</span>
 					    <label class="checkbox">
-					      <input type="checkbox" class="slidr"> Check me out
+					      <input type="checkbox"><span class="slidr"></span> Check me out
 					    </label>
 					    <button type="submit" class="btn">Submit</button>
 					  </fieldset>
 					</form>
 				</div>
-				<div class="span8">
+				<div class="span6">
 					<h2>Horizontal form</h2>
 					<form class="form-horizontal">
 					  <div class="control-group">
@@ -53,7 +108,7 @@
 					  <div class="control-group">
 					    <div class="controls">
 					      <label class="checkbox">
-					        <input type="checkbox" class="slidr slidr-inverse"> Remember me
+					        <input type="checkbox"><span class="slidr slidr-inverse"></span> Remember me
 					      </label>
 					      <button type="submit" class="btn">Sign in</button>
 					    </div>
@@ -68,7 +123,7 @@
 					  <input type="text" class="input-small" placeholder="Email">
 					  <input type="password" class="input-small" placeholder="Password">
 					  <label class="checkbox">
-					    <input type="checkbox" class="slidr slidr-success"> Remember me
+					    <input type="checkbox"><span class="slidr slidr-success"></span> Remember me
 					  </label>
 					  <button type="submit" class="btn">Sign in</button>
 					</form>
@@ -78,73 +133,74 @@
 				<div class="span6">
 					<h2>Slidrs</h2>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-info" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-info"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-success" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-success"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-warning" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-warning"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-danger" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-danger"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 			  	<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-inverse" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-inverse"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 				</div>
 				<div class="span6">
 					<h2>Setting Text</h2>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr" data-on="I" data-off="O" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr" data-on="I" data-off="O"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-info" data-on="ON" data-off="OFF" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-info" data-on="ON" data-off="OFF"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-success" data-on="Ein" data-off="Aus" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-success" data-on="Ein" data-off="Aus"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-warning" data-on="Check" data-off="Nope" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-warning" data-on="Check" data-off="Nope"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 					<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-danger" data-on="✓" value="" checked>
+					  <input type="checkbox" checked>
+						<span class="slidr slidr-danger" data-on="✓" data-off="➠" value=""></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 			  	<label class="checkbox">
-					  <input type="checkbox" class="slidr slidr-inverse" data-on="+" data-off="-" value="" checked>
+					  <input type="checkbox" value="" checked>
+						<span class="slidr slidr-inverse" data-on="+" data-off="-"></span>
 					  Option one is this and that—be sure to include why it's great
 					</label>
 				</div>
 			</div>
-			<div class="row">
-				<div class="span12">
-					<h2>Sample Code</h2>
-					<pre>
-&lt;label class="checkbox"&gt;
-  &lt;!-- 
-    Note the data-on and data-off attributes to set the text.
-    Possible additional classes are:
-    slidr-info | slidr-success | slidr-warning | slidr-danger | slidr-inverse
-  --&gt;
-  &lt;input type="checkbox" class="slidr" data-on="ON" data-off="OFF" value=""&gt;
-  Option one is this and that—be sure to include why it's great
-&lt;/label&gt;</pre>
-				</div>
-			</div>
 		</div>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"></script>
+		<script>
+			window.prettyPrint && prettyPrint()
+		</script>
 	</body>
 </html>

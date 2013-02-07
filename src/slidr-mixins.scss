@@ -9,9 +9,24 @@
   background-repeat: repeat-x;
   filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0)"; // IE9 and down
 }
-// Border Radius
+@mixin double-gradient-vertical($startColor: #555, $endColor: #333, $secondStartColor: #333, $secondEndColor: #555) {
+  background-color: mix($startColor, $endColor, 60%), mix($secondStartColor, $secondEndColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor), -moz-linear-gradient(top, $secondStartColor, $secondEndColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)), -webkit-gradient(linear, 0 0, 0 100%, from($secondStartColor), to($secondEndColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor), -webkit-linear-gradient(top, $secondStartColor, $secondEndColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor), -o-linear-gradient(top, $secondStartColor, $secondEndColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor), linear-gradient(to bottom, $secondStartColor, $secondEndColor); // Standard, IE10
+  background-repeat: no-repeat, no-repeat;
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0)"; // IE9 and down
+}
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
           border-radius: $radius;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
 }

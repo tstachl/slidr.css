@@ -1,206 +1,131 @@
 <!DOCTYPE html>
 <html>
-	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Demo - slidr.css</title>
-    <meta name="description" content="A library to create sliders from checkboxes.">
-    <meta name="viewport" content="width=device-width">
-		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
-		<link href="slidr.css" rel="stylesheet">
-		<style>
-			.checkbox { padding-left: 0px; line-height: 26px; min-height: 26px; }
-			.checkbox input[type="checkbox"] {
-			   position: absolute !important;
-			   top: -9999px !important;
-			   left: -9999px !important;
-			}
-			
-			.com { color: #93a1a1; }
-			.lit { color: #195f91; }
-			.pun, .opn, .clo { color: #93a1a1; }
-			.fun { color: #dc322f; }
-			.str, .atv { color: #D14; }
-			.kwd, .prettyprint .tag { color: #1e347b; }
-			.typ, .atn, .dec, .var { color: teal; }
-			.pln { color: #48484c; }
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Slidr.css by tstachl</title>
+  </head>
 
-			.prettyprint {
-			  padding: 8px;
-			  background-color: #f7f7f9;
-			  border: 1px solid #e1e1e8;
-			}
-			.prettyprint.linenums {
-			  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-			     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-			          box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-			}
+  <body>
+    <div id="container">
+      <div class="inner">
 
-			/* Specify class=linenums on a pre to get line numbering */
-			ol.linenums {
-			  margin: 0 0 0 33px; /* IE indents via margin-left */
-			}
-			ol.linenums li {
-			  padding-left: 12px;
-			  color: #bebec5;
-			  line-height: 20px;
-			  text-shadow: 0 1px 0 #fff;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="span12">
-					<div class="hero-unit">
-						<h1>Slidr.css</h1>
-						<p>A standalone CSS library for sliders. No Javascript needed!</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12">
-					<h2>Sample Code</h2>
-					<pre class="prettyprint lang-html">
-&lt;label class="checkbox"&gt;
-  &lt;!-- 
-    Note the data-on and data-off attributes to set the text.
-    Possible additional classes are:
-    slidr-info | slidr-success | slidr-warning | slidr-danger | slidr-inverse
+        <header>
+          <h1>Slidr.css</h1>
+          <h2>A standalone CSS library for sliding checkboxes.          No Javascript needed!</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/tstachl/slidr.css/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/tstachl/slidr.css/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/tstachl/slidr.css" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>Sample Code</h2>
+
+<pre><code>&lt;label class="checkbox"&gt;
+  &lt;!--
+    Note the data-on and data-off attributes to set text for the states.
+    Possible additional classes (alla Bootstrap) are:
+      * slidr-info
+      * slidr-success
+      * slidr-warning
+      * slidr-danger
+      * slidr-inverse
   --&gt;
-  &lt;input type="checkbox" value=""&gt;
+  &lt;input type="checkbox"&gt;
   &lt;span class="slidr" data-on="ON" data-off="OFF"&gt;&lt;/span&gt;
   Option one is this and that—be sure to include why it's great
-&lt;/label&gt;</pre>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span6">
-					<h2>Default Styles</h2>
-					<form>
-					  <fieldset>
-					    <legend>Legend</legend>
-					    <label>Label name</label>
-					    <input type="text" placeholder="Type something…">
-					    <span class="help-block">Example block-level help text here.</span>
-					    <label class="checkbox">
-					      <input type="checkbox"><span class="slidr"></span> Check me out
-					    </label>
-					    <button type="submit" class="btn">Submit</button>
-					  </fieldset>
-					</form>
-				</div>
-				<div class="span6">
-					<h2>Horizontal form</h2>
-					<form class="form-horizontal">
-					  <div class="control-group">
-					    <label class="control-label" for="inputEmail">Email</label>
-					    <div class="controls">
-					      <input type="text" id="inputEmail" placeholder="Email">
-					    </div>
-					  </div>
-					  <div class="control-group">
-					    <label class="control-label" for="inputPassword">Password</label>
-					    <div class="controls">
-					      <input type="password" id="inputPassword" placeholder="Password">
-					    </div>
-					  </div>
-					  <div class="control-group">
-					    <div class="controls">
-					      <label class="checkbox">
-					        <input type="checkbox"><span class="slidr slidr-inverse"></span> Remember me
-					      </label>
-					      <button type="submit" class="btn">Sign in</button>
-					    </div>
-					  </div>
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12">
-					<h2>Inline form</h2>
-					<form class="form-inline">
-					  <input type="text" class="input-small" placeholder="Email">
-					  <input type="password" class="input-small" placeholder="Password">
-					  <label class="checkbox">
-					    <input type="checkbox"><span class="slidr slidr-success"></span> Remember me
-					  </label>
-					  <button type="submit" class="btn">Sign in</button>
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span6">
-					<h2>Slidrs</h2>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-info"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-success"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-warning"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-danger"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-			  	<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-inverse"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-				</div>
-				<div class="span6">
-					<h2>Setting Text</h2>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr" data-on="I" data-off="O"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-info" data-on="ON" data-off="OFF"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-success" data-on="Ein" data-off="Aus"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-warning" data-on="Check" data-off="Nope"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-					<label class="checkbox">
-					  <input type="checkbox" checked>
-						<span class="slidr slidr-danger" data-on="✓" data-off="➠" value=""></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-			  	<label class="checkbox">
-					  <input type="checkbox" value="" checked>
-						<span class="slidr slidr-inverse" data-on="+" data-off="-"></span>
-					  Option one is this and that—be sure to include why it's great
-					</label>
-				</div>
-			</div>
-		</div>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"></script>
-		<script>
-			window.prettyPrint && prettyPrint()
-		</script>
-	</body>
+&lt;/label&gt;
+</code></pre>
+
+<h2>Styles</h2>
+
+<p><code>slidr.css</code> was built on top of Twitter Bootstrap, therefor I added the default styles which are used for labels, badges, buttons and so on.</p>
+
+<ul>
+<li><code>.slidr-info</code></li>
+<li><code>.slidr-success</code></li>
+<li><code>.slidr-warning</code></li>
+<li><code>.slidr-danger</code></li>
+<li><code>.slidr-inverse</code></li>
+</ul><h3>Transitions</h3>
+
+<p>Currently transitions on pseudo elements is only available in Firefox and Internet Explorer 10. But in case the Chrome update comes available in the next few weeks I added transitions for all browsers</p>
+
+<h2>Get Started</h2>
+
+<ol>
+<li>Download the source, the combined or minified version from GitHub:
+
+<ul>
+<li>
+<a href="https://raw.github.com/tstachl/slidr.css/master/slidr.min.css">https://raw.github.com/tstachl/slidr.css/master/slidr.min.css</a> (minified)</li>
+<li>
+<a href="https://raw.github.com/tstachl/slidr.css/master/slidr.css">https://raw.github.com/tstachl/slidr.css/master/slidr.css</a> (combined)</li>
+</ul>
+</li>
+<li>Include them as stylesheets in your page.</li>
+<li>
+<p>Create a checkbox with the new <code>slidr</code> class:</p>
+
+<p>
+  
+</p>
+</li>
+<li>
+<p>If you need a green slider use <code>slidr-success</code>:</p>
+
+<p>
+  
+</p>
+</li>
+</ol><p>That's it now get cracking ...</p>
+
+<h2>Issues &amp; Contribution</h2>
+
+<p>Please refer to the <em>issues</em> section of this repository if you stumble upon any bugs or possible bugs. But keep in mind to search for a similar issue before posting.</p>
+
+<p>If you want to contribute you know the drill: fork - change - open pull request</p>
+
+<h2>License (MIT)</h2>
+
+<p>Copyright (c) 2013 Thomas Stachl </p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </section>
+
+        <footer>
+          Slidr.css is maintained by <a href="https://github.com/tstachl">tstachl</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-38322237-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
 </html>
